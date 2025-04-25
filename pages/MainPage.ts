@@ -27,7 +27,7 @@ export class MainPage {
     async navigateToEventCreation() {
         await this.eventManagementButton.click();
         await this.createNewEventButton.click();
-        await this.eventNameInput.waitFor({ state: 'visible', timeout: 60000 });
+        await this.eventNameInput.waitFor({ state: 'visible', timeout: 60001 });
     }
 
     async fillEventDetails() {

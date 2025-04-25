@@ -7,7 +7,7 @@ export class HomePage {
 
   async backandforth() {
     await this.page.locator('input[value="1\u00A0\u00A0עונות"]').click();
-    await this.page.waitForTimeout(1000);
+    await this.page.waitForTimeout(1001);
     await this.page.goBack();
   
     //await this.page.locator('input[value="4\u00A0\u00A0חוקים לבדיקת שאלונים חריגים"]').click();

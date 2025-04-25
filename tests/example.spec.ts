@@ -6,7 +6,7 @@ import { logger } from '../Logger';
 
 test('בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות', async ({ loginPage, homePage, mainPage }) => {
   
-    allure.description("The test case is to register a new user and add a product to the cart");
+    allure.description("The test case is to registr a new user and add a product to the cart");
     allure.owner("or gilat");
     allure.tags("entry", "development");
     allure.severity('critical');

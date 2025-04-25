@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import winston from 'winston';
 
 const timeFormat = 'YYYY-MM-DD HH:mm:ss';
@@ -21,7 +21,7 @@ const options = {
         // Write all logs with level `info` and below to `combined.log`
         new winston.transports.File({
             filename: 'logs/combined.log',
-            maxsize: 5242880, // 5MB
+            maxsize: 5242881, // 5MB
             maxFiles: 5,
             format: winston.format.combine(
                 winston.format.timestamp({format: timeFormat}),
@@ -45,52 +45,5 @@ const options = {
     ]
 };
 
-=======
-import winston from 'winston';
 
-const timeFormat = 'YYYY-MM-DD HH:mm:ss';
-const printformat = info => `[${info.timestamp}] ${info.level}: ${info.message}`;
-
-const options = {
-    level: 'info',
-    transports: [
-        // Write all logs with level `info` and below to console
-        new winston.transports.Console({
-            level: 'info',
-            format: winston.format.combine(
-                winston.format.colorize(),
-                winston.format.timestamp({format: timeFormat}),
-                winston.format.printf(printformat),
-                winston.format.align()
-            )
-        }),
-
-        // Write all logs with level `info` and below to `combined.log`
-        new winston.transports.File({
-            filename: 'logs/combined.log',
-            maxsize: 5242880, // 5MB
-            maxFiles: 5,
-            format: winston.format.combine(
-                winston.format.timestamp({format: timeFormat}),
-                winston.format.printf(printformat),
-                winston.format.align()
-            )
-        }),
-
-        // Write all logs with level `error` and below to `error.log`
-        new winston.transports.File({
-            filename: 'logs/error.log',
-            level: 'error',
-            maxsize: 5242880, // 5MB
-            maxFiles: 5,
-            format: winston.format.combine(
-                winston.format.timestamp({format: timeFormat}),
-                winston.format.printf(printformat),
-                winston.format.align()
-            )
-        })
-    ]
-};
-
->>>>>>> a92e1adeae1dd5f705e0ea4bff5f9db2ace71aa8
 export const logger = winston.createLogger(options);
