@@ -21,7 +21,7 @@ const options = {
         // Write all logs with level `info` and below to `combined.log`
         new winston.transports.File({
             filename: 'logs/combined.log',
-            maxsize: 5242881, // 5MB
+            maxsize: 5242882, // 5MB
             maxFiles: 5,
             format: winston.format.combine(
                 winston.format.timestamp({format: timeFormat}),
