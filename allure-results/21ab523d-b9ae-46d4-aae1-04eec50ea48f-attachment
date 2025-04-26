@@ -1,0 +1,221 @@
+# Test info
+
+- Name: בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:7:5
+
+# Error details
+
+```
+Error: locator.click: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for locator('#layout > div > div.app_content > div > main > div > div:nth-child(7) > div > div:nth-child(2) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button')
+
+    at MainPage.fillEventDetails (C:\Users\User\Downloads\playwright-ts\pages\MainPage.ts:51:34)
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:33:5
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:32:3
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - button " עזרה":
+    - text: 
+    - paragraph: עזרה
+  - button " חזרה לדף הבית":
+    - text: 
+    - paragraph: חזרה לדף הבית
+  - link "":
+    - /url: "#/userLinks/21F35AF5A1F748B0ADB8"
+    - button ""
+  - text: 1.0.0.93
+- banner: ניהול אירוע סוציומטרי No-Text needSeelctPikud
+- main:
+  - text:  
+  - paragraph: מידע והנחיות
+  - paragraph: מודל כלל יחידתי - כולם מעריכים את כולם מודל תת יחידתי - כל קבוצה מעריכה את עצמה מודל כוכב - יחידת ליבה מעריכה את עצמה ואת היחידות המשתתפות, שם הן מעריכות את עצמן ואת יחידת הליבה.
+  - button ""
+  - text:  שאלון 1. שאלון סוציומטרי  מספר אירוע 418  כמות משיבים במטריצת מעריכים 0 שם האירוע
+  - textbox: מרינה 2025
+  - text: שם האירוע No-Text period
+  - button "עונת 1"
+  - text:  No-Text period
+  - list:
+    - listitem: עונת 1 
+  - text: No-Text pikud
+  - button
+  - text:  No-Text pikud
+  - list:
+    - listitem: חיל אויר 
+    - listitem: כללי 
+    - listitem: "משא`ן "
+    - listitem: פיקוד העורף 
+    - listitem: תקשוב 
+  - combobox "תאריך התחלה": 06-04-2025
+  - button "Select": 
+  - text: תאריך התחלה
+  - combobox "תאריך סיום"
+  - button "Select": 
+  - text: תאריך סיום
+  - paragraph: סטטוס האירוע
+  - list:
+    - listitem:
+      - radio "בהכנה" [checked]
+      - text:  בהכנה
+    - listitem:
+      - radio "בביצוע"
+      - text:  בביצוע
+    - listitem:
+      - radio "השהייה"
+      - text:  השהייה
+    - listitem:
+      - radio "סיום הזנה"
+      - text:  סיום הזנה
+    - listitem:
+      - radio "הסתיים/חישובים"
+      - text:  הסתיים/חישובים
+    - listitem:
+      - radio "סופי"
+      - text:  סופי
+    - listitem:
+      - radio "במאגר"
+      - text:  במאגר
+  - text: "בחירת יחידה ראשית  צה`ל - צה`ל "
+  - textbox "חפש..."
+  - text: חפש
+  - tree:
+    - group:
+      - 'treeitem "צה`ל" [expanded] [level=1] [selected]':
+        - checkbox "" [checked]
+        - text: "צה`ל - (100025) "
+        - group:
+          - treeitem "פיקוד 1" [level=2]:
+            - checkbox
+            - text: פיקוד 1 - (19344) 
+          - treeitem "פיקוד 2" [level=2]:
+            - checkbox
+            - text: פיקוד 2 - (15544) 
+          - treeitem "פיקוד 3" [level=2]:
+            - checkbox
+            - text: פיקוד 3 - (15437) 
+          - treeitem "פיקוד 4" [level=2]:
+            - checkbox
+            - text: פיקוד 4 - (15400) 
+          - treeitem "פיקוד 5" [level=2]:
+            - checkbox
+            - text: פיקוד 5 - (15224) 
+          - treeitem "פיקוד 6" [level=2]:
+            - checkbox
+            - text: פיקוד 6 - (19075) 
+  - text: הגדרת סוג היחידה לאירוע
+  - button
+  - text:  הגדרת סוג היחידה לאירוע
+  - list:
+    - listitem: 
+    - listitem: שדה 
+    - listitem: מטה 
+  - text: בחירת יחידות שאינן משתתפות באירוע אנא בחר יחידה ראשית בחירת יחידות מאגדות להצגת דוח מילוי אנא בחר יחידה ראשית שאלות שאלות חובה
+  - paragraph: שאלות אלו לא ניתנות לשינוי
+  - text: שאלות בחירה
+  - paragraph: בחר שתי שאלות בחירה
+  - text: בחירת שאלות בחירה 0/2
+  - checkbox "מידת היכרות"
+  - text:  מידת היכרות
+  - checkbox "מקצועי בתחומו"
+  - text:  מקצועי בתחומו
+  - checkbox "יחסי אנוש"
+  - text:  יחסי אנוש
+  - checkbox "דוגמא אישית"
+  - text:  דוגמא אישית
+  - checkbox "ארגון וניהול"
+  - text:  ארגון וניהול
+  - checkbox "פיקוד ומנהיגות"
+  - text:  פיקוד ומנהיגות
+  - checkbox "מחוייבות והשקעה"
+  - text:  מחוייבות והשקעה
+  - checkbox "הצלחה במילוי תפקיד"
+  - text:  הצלחה במילוי תפקיד
+  - checkbox "פוטנציאל לקידום"
+  - text:  פוטנציאל לקידום
+  - checkbox "נכונות לצאת איתו לקרב"
+  - text:  נכונות לצאת איתו לקרב
+  - checkbox "הבחנה בין עיקר לטפל"
+  - text:  הבחנה בין עיקר לטפל
+  - checkbox "ראייה והבנה מערכתית"
+  - text:  ראייה והבנה מערכתית
+  - checkbox "מקוריות וחדשנות"
+  - text:  מקוריות וחדשנות
+  - checkbox "גמישות מחשבתית"
+  - text:  גמישות מחשבתית
+  - checkbox "יכולת תכנון"
+  - text:  יכולת תכנון
+  - checkbox "יכולת הפקת לקחים ויישומם"
+  - text:  יכולת הפקת לקחים ויישומם הערות מילוליות
+  - paragraph: סמן V אם ברצונך להוסיף הערות מילוליות
+  - checkbox "הערות מילוליות"
+  - text:  הערות מילוליות usersId=11 loginManagerId=-1 viewOnly=false status=1 adminPermission=true eventEditAccess=1 isPotentialCompleted=false isSuspectCareCompleted=false eventStatus2to1Access=1 eventStatus3to2Access=1
+```
+
+# Test source
+
+```ts
+   1 |
+   2 | import { Page, Locator, expect } from '@playwright/test';
+   3 |
+   4 | export class MainPage {
+   5 |     readonly page: Page;
+   6 |     readonly eventManagementButton: Locator;
+   7 |     readonly createNewEventButton: Locator;
+   8 |     readonly eventNameInput: Locator;
+   9 |     readonly seasonDropdown: Locator;
+  10 |     readonly startDateButton: Locator;
+  11 |     readonly endDateButton: Locator;
+  12 |     readonly seasonOption: Locator;
+  13 |
+  14 |
+  15 |     constructor(page: Page) {
+  16 |         this.page = page;
+  17 |         this.eventManagementButton = page.locator('input[value="1\u00A0\u00A0ניהול אירועים"]');
+  18 |         this.createNewEventButton = page.locator('button:has-text("להקמת אירוע חדש")');
+  19 |         this.eventNameInput = page.locator('div.text-box[data-label-val="שם האירוע"] input[type="text"]');
+  20 |         this.seasonDropdown = page.locator('div.dropdown.dropdown-select[label="No-Text period"]');
+  21 |         this.seasonOption = page.locator('span:has-text("עונת 1")');
+  22 |
+  23 |         this.startDateButton = page.locator(
+  24 |             '#layout > div > div.app_content > div > main > div > div:nth-child(9) > div > div:nth-child(1) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+  25 |         );
+  26 |         this.endDateButton = page.locator(
+  27 |             '#layout > div > div.app_content > div > main > div > div:nth-child(7) > div > div:nth-child(2) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+  28 |         );
+  29 |     }
+  30 |
+  31 |     async navigateToEventCreation() {
+  32 |         await this.eventManagementButton.click();
+  33 |         await this.createNewEventButton.click();
+  34 |        
+  35 |     }
+  36 |
+  37 |     async fillEventDetails() {
+  38 |         await expect(this.eventNameInput).toBeVisible({ timeout: 10000 }); // לוודא שהוא על המסך
+  39 |         await this.eventNameInput.click(); // לתת פוקוס אמיתי
+  40 |         await this.eventNameInput.fill('מרינה 2025'); // לא בכח (ללא force!)
+  41 |         await expect(this.eventNameInput).toHaveValue('מרינה 2025');
+  42 |
+  43 |         await this.seasonDropdown.click();
+  44 |         await this.seasonOption.click();
+  45 |         // הוספת בחירת עונה כאן אם צריך
+  46 |
+  47 |         // בחירת תאריך התחלה
+  48 |         await this.startDateButton.click();
+  49 |         const startDate = this.page.locator('[data-value="2025/04/06"]');
+  50 |         await startDate.click();    // בחירת תאריך סיום
+> 51 |         await this.endDateButton.click();
+     |                                  ^ Error: locator.click: Test timeout of 90000ms exceeded.
+  52 |         await this.page.keyboard.press('Enter');
+  53 |     }
+  54 | }
+  55 |
+  56 |
+  57 |
+  58 |
+```

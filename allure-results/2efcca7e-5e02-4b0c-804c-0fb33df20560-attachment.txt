@@ -1,0 +1,2 @@
+[2025-04-26 18:14:52] info: The test case has started
+[2025-04-26 18:15:30] info: we came to the end
