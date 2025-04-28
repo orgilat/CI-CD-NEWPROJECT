@@ -1,0 +1,147 @@
+# Test info
+
+- Name: בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:7:5
+
+# Error details
+
+```
+Error: locator.scrollIntoViewIfNeeded: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('div.col-4:has(div.section_title:has-text("בחירת יחידות מאגדות להצגת דוח מילוי"))').locator('li[role="treeitem"][aria-label="אוגדה 1"]').locator('div.dx-checkbox-container')
+
+    at MainPage.fillEventDetails (C:\Users\User\Downloads\playwright-ts\pages\MainPage.ts:111:26)
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:33:5
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:32:3
+```
+
+# Test source
+
+```ts
+   11 |     readonly startDateButton: Locator;
+   12 |     readonly endDateButton: Locator;
+   13 |     readonly seasonOption: Locator;
+   14 |     readonly recruit: Locator;
+   15 |     readonly recruitOption: Locator;
+   16 |     readonly mateS: Locator;
+   17 |     readonly mateC: Locator;
+   18 |     readonly pikud1: Locator; 
+   19 |     readonly list2: Locator;
+   20 |     readonly ogda1: Locator;
+   21 |     readonly end1: Locator;
+   22 |     readonly end2: Locator;
+   23 |     readonly end3: Locator;
+   24 |     readonly end4: Locator;
+   25 |     readonly final: Locator;
+   26 |
+   27 |
+   28 |
+   29 |     constructor(page: Page) {
+   30 |         this.page = page;
+   31 |         this.eventManagementButton = page.locator('input[value="1\u00A0\u00A0ניהול אירועים"]');
+   32 |         this.createNewEventButton = page.locator('button:has-text("להקמת אירוע חדש")');
+   33 |         this.eventNameInput = page.locator('div.text-box[data-label-val="שם האירוע"] input[type="text"]');
+   34 |         this.seasonDropdown = page.locator('div.dropdown.dropdown-select[label="No-Text period"]');
+   35 |         this.seasonOption = page.locator('span:has-text("עונת 1")');
+   36 |         this.recruit = page.locator('div.dropdown-btn.text-box[data-label-val="No-Text pikud"]');
+   37 |         this.recruitOption = page.locator('span:has-text("כללי")');
+   38 |         this.mateS = page.locator('div.dropdown-btn.text-box[data-label-val="הגדרת סוג היחידה לאירוע "]');
+   39 |         this.mateC = page.locator('span:has-text("מטה")');
+   40 |         this.pikud1 = page.locator(
+   41 |             'li[role="treeitem"][aria-label="פיקוד 1"] >> div[role="checkbox"]'
+   42 |           );
+   43 | // במקום זה:
+   44 |        this.list2 = page.locator(
+   45 |     'div.col-4:has(div.section_title:has-text("בחירת יחידות מאגדות להצגת דוח מילוי"))'
+   46 |   );
+   47 |
+   48 |   // מתוך אותו קונטיינר – מגדירים את ה־checkbox של אוגדה 1
+   49 |        this.ogda1 = this.list2.locator(
+   50 |     'li[role="treeitem"][aria-label="אוגדה 1"] >> div.dx-checkbox-container'
+   51 |   );
+   52 |
+   53 |
+   54 |
+   55 |
+   56 |         this.startDateButton = page.locator(
+   57 |             '#layout > div > div.app_content > div > main > div > div:nth-child(9) > div > div:nth-child(1) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+   58 |         );
+   59 |         this.endDateButton = page.locator(
+   60 |             '#layout > div > div.app_content > div > main > div > div:nth-child(9) > div > div:nth-child(2) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+   61 |         );
+   62 |
+   63 |
+   64 |
+   65 |         this.end1 = page.locator('#layout > div > div.app_content > div > main > div > div:nth-child(22) > div.questions_section > div:nth-child(2) > div');
+   66 |         
+   67 |         this.end3 = page.locator('#layout > div > div.app_content > div > main > div > div:nth-child(22) > div.questions_section > div:nth-child(6) > div');
+   68 |         
+   69 |         this.final = page.locator('div.q-tab__label:has-text("ניהול פוטנציאל")');
+   70 |
+   71 |
+   72 |       
+   73 |     }
+   74 |
+   75 |     async navigateToEventCreation() {
+   76 |         await this.eventManagementButton.click();
+   77 |         await this.createNewEventButton.click();
+   78 |        
+   79 |     }
+   80 |
+   81 |     async fillEventDetails() {
+   82 |         await this.eventNameInput.waitFor({ state: 'visible' });
+   83 |         await this.eventNameInput.click({ force: true });
+   84 |         await this.page.waitForTimeout(200); // זמן קטן לייצוב
+   85 |         await this.eventNameInput.fill(''); // לנקות את השדה
+   86 |         await this.page.waitForTimeout(200); // עוד זמן קטן
+   87 |         await this.page.keyboard.type('מרינה 2025', { delay: 150 });
+   88 |         await expect(this.eventNameInput).toHaveValue('מרינה 2025', { timeout: 5000 });
+   89 |
+   90 |
+   91 |         await this.seasonDropdown.click();
+   92 |         await this.seasonOption.click();
+   93 |         // הוספת בחירת עונה כאן אם צריך
+   94 |
+   95 |         // בחירת תאריך התחלה
+   96 |         await this.startDateButton.click();
+   97 |         const startDate = this.page.locator('[data-value="2025/04/06"]');
+   98 |         await startDate.click();    // בחירת תאריך סיום
+   99 |         await this.endDateButton.click();
+  100 |         await this.page.keyboard.press('Enter');
+  101 |         await this.recruit.click();
+  102 |         await this.recruitOption.click();
+  103 |         logger.info('we came to the end');
+  104 |         await this.mateS.click();
+  105 |         logger.info('worked');
+  106 |         await this.mateC.click();
+  107 |         await this.pikud1.click();
+  108 |         logger.info('פיקוד אחד נלחץ');
+  109 |         await this.page.waitForTimeout(1000)
+  110 |         await this.list2.scrollIntoViewIfNeeded();
+> 111 |         await this.ogda1.scrollIntoViewIfNeeded();
+      |                          ^ Error: locator.scrollIntoViewIfNeeded: Target page, context or browser has been closed
+  112 |         await this.ogda1.click({ force: true });
+  113 |         logger.info('אוגדה 1 נלחצה');
+  114 |         await this.page.waitForTimeout(2500);
+  115 |
+  116 |     }
+  117 |       
+  118 |
+  119 |     
+  120 |     async checkbox() {
+  121 |
+  122 |   // גלילה כדי לוודא שהאלמנטים גלויים
+  123 |         await this.end1.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  124 |         await this.end1.click({ force: true });
+  125 |         await this.page.waitForTimeout(2500);
+  126 |       
+  127 |         await this.end3.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  128 |         await this.end3.click({ force: true });
+  129 |         await this.page.waitForTimeout(2500);
+  130 |         await this.final.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  131 |         await this.final.click({ force: true });
+  132 |         await this.page.waitForTimeout(2500);
+  133 |
+  134 |      }  
+  135 |     } 
+```

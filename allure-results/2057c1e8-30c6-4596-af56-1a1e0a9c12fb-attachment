@@ -1,0 +1,63 @@
+# Test info
+
+- Name: בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:7:5
+
+# Error details
+
+```
+Error: locator.hover: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('a:has-text("ניהול הסקר")')
+
+    at HomePage.backandforth (C:\Users\User\Downloads\playwright-ts\pages\HomePage.ts:12:29)
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:21:20
+    at Function.step (C:\Users\User\Downloads\playwright-ts\node_modules\allure-playwright\src\helpers.ts:21:17)
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:20:16
+```
+
+# Test source
+
+```ts
+   1 |
+   2 | import { Page } from '@playwright/test';
+   3 |
+   4 | export class HomePage {
+   5 |   constructor(private page: Page) {}
+   6 |
+   7 |
+   8 |   async backandforth() {
+   9 |    
+  10 |       // ריחוף על "ניהול הסקר"
+  11 |       const surveyAdminLink = this.page.locator('a:has-text("ניהול הסקר")');
+> 12 |       await surveyAdminLink.hover();
+     |                             ^ Error: locator.hover: Target page, context or browser has been closed
+  13 |     
+  14 |       // המתנה שתתפרס התפריט
+  15 |       const sociometricLink = this.page.locator('a:has-text("ניהול סוציומטרי")');
+  16 |      
+  17 |     
+  18 |       // לחיצה על "ניהול סוציומטרי"
+  19 |       await sociometricLink.click();
+  20 |       await this.page.waitForTimeout(1000)
+  21 |     
+  22 |    
+  23 |     await this.page.locator('input[value="1\u00A0\u00A0עונות"]').click();
+  24 |     await this.page.waitForTimeout(1001);
+  25 |     await this.page.goBack();
+  26 |   
+  27 |     //await this.page.locator('input[value="4\u00A0\u00A0חוקים לבדיקת שאלונים חריגים"]').click();
+  28 |     //await this.page.waitForTimeout(1000);
+  29 |     //await this.page.goBack();
+  30 |
+  31 |     //await this.page.locator('#bodybody > div.BodyOut-continar > div > ul:nth-child(5) > li:nth-child(11) > input').click();
+  32 |     //await this.page.waitForTimeout(1000);
+  33 |     //await this.page.waitForSelector('#search42');
+  34 |     //await this.page.locator('#search42').fill("אני הגואט");
+  35 |     //await this.page.goBack();
+  36 |   
+  37 |   }
+  38 |   
+  39 |
+  40 | }
+```

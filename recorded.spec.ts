@@ -1,0 +1,35 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://www.survey.co.il/pms/MMDANEW/default.asp');
+  await page.getByRole('textbox', { name: 'הכנס שם משתמש' }).click();
+  await page.getByRole('textbox', { name: 'הכנס שם משתמש' }).press('ControlOrMeta+ה');
+  await page.getByRole('textbox', { name: 'הכנס סיסמה' }).click();
+  await page.getByRole('textbox', { name: 'הכנס סיסמה' }).press('ControlOrMeta+ה');
+  await page.getByRole('button', { name: 'כניסה' }).click();
+  await page1.getByRole('link', { name: 'ניהול סוציומטרי' }).click();
+  await page1.getByRole('button', { name: 'ניהול אירועים' }).click();
+  await page1.goto('https://www.survey.co.il/SMclient/#/eventsList/7FF345DA1B5F4DA190C1/');
+  await page1.getByRole('button', { name: 'להקמת אירוע חדש' }).click();
+  await page1.locator('div').filter({ hasText: /^שם האירוע$/ }).getByRole('textbox').click();
+  await page1.locator('div').filter({ hasText: /^שם האירוע$/ }).getByRole('textbox').fill('מממ');
+  await page1.locator('input[type="button"]').first().click();
+  await page1.getByRole('listitem').filter({ hasText: 'עונת' }).locator('div').click();
+  await page1.locator('input[type="button"]').nth(1).click();
+  await page1.locator('div').filter({ hasText: /^כללי$/ }).click();
+  await page1.getByRole('button', { name: 'Select' }).first().click();
+  await page1.getByText('28').first().click();
+  await page1.getByRole('button', { name: 'Select' }).nth(1).click();
+  await page1.getByRole('rowgroup').filter({ hasText: '543213130121110987619181716151413262524232221203213029282710987654' }).getByLabel('יום שלישי, 29 באפריל').click();
+  await page1.locator('input[type="button"]').nth(2).click();
+  await page1.getByRole('listitem').filter({ hasText: 'מטה' }).locator('div').click();
+  await page1.getByRole('treeitem', { name: 'פיקוד 1' }).getByRole('checkbox').click();
+  await page1.getByText('הבחנה בין עיקר לטפל').click();
+  await page1.getByText('ראייה והבנה מערכתית').click();
+  await page1.getByRole('tab', { name: 'ניהול פוטנציאל' }).click();
+  await page1.getByRole('button', { name: 'חשב פוטנציאל מחדש' }).click();
+  await page1.getByRole('button', { name: 'הצג פוטנציאל' }).click();
+  await page1.getByText('הטיפול הושלם').click();
+  await page1.getByRole('button', { name: 'הצג פוטנציאל' }).click();
+  await page1.getByText('close').click();
+});

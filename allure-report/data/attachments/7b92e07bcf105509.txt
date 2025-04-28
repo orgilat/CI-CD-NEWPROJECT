@@ -1,0 +1,219 @@
+# Test info
+
+- Name: בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:7:5
+
+# Error details
+
+```
+Error: Timed out 5000ms waiting for expect(locator).toHaveValue(expected)
+
+Locator: locator('div.text-box[data-label-val="שם האירוע"] input[type="text"]')
+Expected string: "מרינה 2025"
+Received string: ""
+Call log:
+  - expect.toHaveValue with timeout 5000ms
+  - waiting for locator('div.text-box[data-label-val="שם האירוע"] input[type="text"]')
+    9 × locator resolved to <input type="text"/>
+      - unexpected value ""
+
+    at MainPage.fillEventDetails (C:\Users\User\Downloads\playwright-ts\pages\MainPage.ts:74:43)
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:33:5
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:32:3
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - button " עזרה":
+    - text: 
+    - paragraph: עזרה
+  - button " חזרה לדף הבית":
+    - text: 
+    - paragraph: חזרה לדף הבית
+  - link "":
+    - /url: "#/userLinks/7437A047144743ACACE7"
+    - button ""
+  - text: 1.0.0.93
+- banner: ניהול אירוע סוציומטרי No-Text needSeelctPeriod
+- main:
+  - text:  
+  - paragraph: מידע והנחיות
+  - paragraph: מודל כלל יחידתי - כולם מעריכים את כולם מודל תת יחידתי - כל קבוצה מעריכה את עצמה מודל כוכב - יחידת ליבה מעריכה את עצמה ואת היחידות המשתתפות, שם הן מעריכות את עצמן ואת יחידת הליבה.
+  - button ""
+  - text:  שאלון 1. שאלון סוציומטרי  מספר אירוע 448  כמות משיבים במטריצת מעריכים 0 שם האירוע
+  - textbox
+  - text: שם האירוע No-Text period
+  - button
+  - text:  No-Text period
+  - list:
+    - listitem: עונת 1 
+  - text: No-Text pikud
+  - button
+  - text:  No-Text pikud
+  - list:
+    - listitem: חיל אויר 
+    - listitem: כללי 
+    - listitem: "משא`ן "
+    - listitem: פיקוד העורף 
+    - listitem: תקשוב 
+  - combobox "תאריך התחלה"
+  - button "Select": 
+  - text: תאריך התחלה
+  - combobox "תאריך סיום"
+  - button "Select": 
+  - text: תאריך סיום
+  - paragraph: סטטוס האירוע
+  - list:
+    - listitem:
+      - radio "בהכנה" [checked]
+      - text:  בהכנה
+    - listitem:
+      - radio "בביצוע"
+      - text:  בביצוע
+    - listitem:
+      - radio "השהייה"
+      - text:  השהייה
+    - listitem:
+      - radio "סיום הזנה"
+      - text:  סיום הזנה
+    - listitem:
+      - radio "הסתיים/חישובים"
+      - text:  הסתיים/חישובים
+    - listitem:
+      - radio "סופי"
+      - text:  סופי
+    - listitem:
+      - radio "במאגר"
+      - text:  במאגר
+  - text: "בחירת יחידה ראשית  צה`ל - צה`ל "
+  - textbox "חפש..."
+  - text: חפש
+  - tree "אין מידע"
+  - text: הגדרת סוג היחידה לאירוע
+  - button
+  - text:  הגדרת סוג היחידה לאירוע
+  - list:
+    - listitem: 
+    - listitem: שדה 
+    - listitem: מטה 
+  - text: בחירת יחידות שאינן משתתפות באירוע אנא בחר יחידה ראשית בחירת יחידות מאגדות להצגת דוח מילוי אנא בחר יחידה ראשית שאלות No-Text needSelectPeriod
+- text: טוען...
+```
+
+# Test source
+
+```ts
+   1 |
+   2 | import { Page, Locator, expect } from '@playwright/test';
+   3 | import { logger } from '../Logger';
+   4 |
+   5 | export class MainPage {
+   6 |     readonly page: Page;
+   7 |     readonly eventManagementButton: Locator;
+   8 |     readonly createNewEventButton: Locator;
+   9 |     readonly eventNameInput: Locator;
+   10 |     readonly seasonDropdown: Locator;
+   11 |     readonly startDateButton: Locator;
+   12 |     readonly endDateButton: Locator;
+   13 |     readonly seasonOption: Locator;
+   14 |     readonly recruit: Locator;
+   15 |     readonly recruitOption: Locator;
+   16 |     readonly mateS: Locator;
+   17 |     readonly mateC: Locator;
+   18 |     readonly pikud1: Locator; 
+   19 |     readonly list2: Locator;
+   20 |     readonly ogda1: Locator;
+   21 |     readonly end1: Locator;
+   22 |
+   23 |
+   24 |
+   25 |     constructor(page: Page) {
+   26 |         this.page = page;
+   27 |         this.eventManagementButton = page.locator('input[value="1\u00A0\u00A0ניהול אירועים"]');
+   28 |         this.createNewEventButton = page.locator('button:has-text("להקמת אירוע חדש")');
+   29 |         this.eventNameInput = page.locator('div.text-box[data-label-val="שם האירוע"] input[type="text"]');
+   30 |         this.seasonDropdown = page.locator('div.dropdown.dropdown-select[label="No-Text period"]');
+   31 |         this.seasonOption = page.locator('span:has-text("עונת 1")');
+   32 |         this.recruit = page.locator('div.dropdown-btn.text-box[data-label-val="No-Text pikud"]');
+   33 |         this.recruitOption = page.locator('span:has-text("כללי")');
+   34 |         this.mateS = page.locator('div.dropdown-btn.text-box[data-label-val="הגדרת סוג היחידה לאירוע "]');
+   35 |         this.mateC = page.locator('span:has-text("מטה")');
+   36 |         this.pikud1 = page.locator(
+   37 |             'li[role="treeitem"][aria-label="פיקוד 1"] >> div[role="checkbox"]'
+   38 |           );
+   39 | // במקום זה:
+   40 |        this.list2 = page.locator(
+   41 |     'div.col-4:has(div.section_title:has-text("בחירת יחידות מאגדות להצגת דוח מילוי"))'
+   42 |   );
+   43 |
+   44 |   // מתוך אותו קונטיינר – מגדירים את ה־checkbox של אוגדה 1
+   45 |        this.ogda1 = this.list2.locator(
+   46 |     'li[role="treeitem"][aria-label="אוגדה 1"] >> div.dx-checkbox-container'
+   47 |   );
+   48 |
+   49 |
+   50 |
+   51 |
+   52 |         this.startDateButton = page.locator(
+   53 |             '#layout > div > div.app_content > div > main > div > div:nth-child(9) > div > div:nth-child(1) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+   54 |         );
+   55 |         this.endDateButton = page.locator(
+   56 |             '#layout > div > div.app_content > div > main > div > div:nth-child(9) > div > div:nth-child(2) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+   57 |         );
+   58 |
+   59 |
+   60 |
+   61 |         this.end1 = page.locator('input#9');
+   62 |
+   63 |     }
+   64 |
+   65 |     async navigateToEventCreation() {
+   66 |         await this.eventManagementButton.click();
+   67 |         await this.createNewEventButton.click();
+   68 |        
+   69 |     }
+   70 |
+   71 |     async fillEventDetails() {
+   72 |         await this.eventNameInput.click({ force: true });
+   73 |         await this.page.keyboard.type('מרינה 2025');
+>  74 |         await expect(this.eventNameInput).toHaveValue('מרינה 2025', { timeout: 5000 });
+      |                                           ^ Error: Timed out 5000ms waiting for expect(locator).toHaveValue(expected)
+   75 |         
+   76 |         
+   77 |         
+   78 |
+   79 |         await this.seasonDropdown.click();
+   80 |         await this.seasonOption.click();
+   81 |         // הוספת בחירת עונה כאן אם צריך
+   82 |
+   83 |         // בחירת תאריך התחלה
+   84 |         await this.startDateButton.click();
+   85 |         const startDate = this.page.locator('[data-value="2025/04/06"]');
+   86 |         await startDate.click();    // בחירת תאריך סיום
+   87 |         await this.endDateButton.click();
+   88 |         await this.page.keyboard.press('Enter');
+   89 |         await this.recruit.click();
+   90 |         await this.recruitOption.click();
+   91 |         logger.info('we came to the end');
+   92 |         await this.mateS.click();
+   93 |         logger.info('worked');
+   94 |         await this.mateC.click();
+   95 |         await this.pikud1.click();
+   96 |         logger.info('פיקוד אחד נלחץ');
+   97 |         await this.page.waitForTimeout(9000)
+   98 |         await this.list2.scrollIntoViewIfNeeded();
+   99 |         await this.ogda1.scrollIntoViewIfNeeded();
+  100 |         await this.ogda1.click({ force: true });
+  101 |         logger.info('אוגדה 1 נלחצה');
+  102 |         await this.end1.click();
+  103 |         await this.page.waitForTimeout(7000)
+  104 |         // מחכה 3 שניות (3000 מילישניות)
+  105 |       
+  106 |
+  107 |     }
+  108 | }
+  109 |
+  110 |
+```

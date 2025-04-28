@@ -1,0 +1,450 @@
+# Test info
+
+- Name: בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:5:5
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: getByRole('columnheader', { name: 'טור הטיפול הושלם' }).locator('span') resolved to 2 elements:
+    1) <span class="dx-sort dx-sort-none"></span> aka getByRole('columnheader', { name: 'טור הטיפול הושלם' }).locator('span').first()
+    2) <span class="dx-sort dx-sort-none"></span> aka getByRole('columnheader', { name: 'טור הטיפול הושלם' }).locator('span').nth(1)
+
+Call log:
+  - waiting for getByRole('columnheader', { name: 'טור הטיפול הושלם' }).locator('span')
+
+    at Potential.Stage222 (C:\Users\User\Downloads\playwright-ts\pages\Potential.ts:31:19)
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:38:5
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:37:3
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - button " עזרה":
+    - text: 
+    - paragraph: עזרה
+  - button " חזרה לדף הבית":
+    - text: 
+    - paragraph: חזרה לדף הבית
+  - link "":
+    - /url: "#/userLinks/00B448405B3D448B9E8E"
+    - button ""
+  - text: 1.0.0.93
+- banner:
+  - text: ניהול אירוע סוציומטרי
+  - tablist:
+    - tab "עריכת האירוע"
+    - tab "ניהול פוטנציאל" [selected]
+    - tab "מודל הערכה"
+- main:
+  - button "הצג פוטנציאל"
+  - text:  עדכון פוטנציאל אחרון התבצע ב- 28.4.2025 18:15
+  - button "חשב פוטנציאל מחדש"
+  - button "משתתפים שהוסרו בעדכון מאגר"
+- text: "רשימת משתתפים סה`כ שורות 19343 סך הכל עומדים בקריטריונים להשתתפות 19236 סך הכל נבחר 19343 סה`כ שורות לאחר פילטור בעמודות 19343 הצג את כולם"
+- combobox "מסנן"
+- text: מסנן
+- grid "טבלת נתונים":
+  - toolbar "Data grid toolbar":
+    - button "בחירת עמודה": 
+  - row "טור ערוך פרטים טור שם פרטי (סאפ) טור שם משפחה (סאפ) טור מספר אישי (סאפ) טור יחידת אירוע טור תפקיד (סאפ) טור תפקיד באירוע (מנוהל) טור יחידת אמת (סאפ) טור תאריך קליטה ביחידה (סאפ) טור נוכחות ביחידה פחות מ-30 יום (סאפ) טור דרגת כתף באירוע טור דרגת כתף טור סיבת העדרות אחרונה (סאפ) טור כמות ימים שלא היה ביחידה (סאפ) טור יחידה מאגדת טור ימי שהייה ביחידה מיום ההצבה ליום המתוכנן של הארוע טור ימי העדרות בפועל טור הדרישה לתקופת מינימום ביחידה כתלות בימי העדרות טור הדרישה לרצף שהייה ביחידה לפני יום הארוע כפיצוי על ימי העדרות טור עמידה בקריטריונים להשתתפות טור סיבת הוספה טור סיבת הסרה משתתף טור הטיפול הושלם":
+    - columnheader "טור ערוך פרטים": ערוך פרטים
+    - columnheader "טור שם פרטי (סאפ)": שם פרטי (סאפ)
+    - columnheader "טור שם משפחה (סאפ)": שם משפחה (סאפ)
+    - columnheader "טור מספר אישי (סאפ)": מספר אישי (סאפ)
+    - columnheader "טור יחידת אירוע": יחידת אירוע
+    - columnheader "טור תפקיד (סאפ)": תפקיד (סאפ)
+    - columnheader "טור תפקיד באירוע (מנוהל)": תפקיד באירוע (מנוהל)
+    - columnheader "טור יחידת אמת (סאפ)": יחידת אמת (סאפ)
+    - columnheader "טור תאריך קליטה ביחידה (סאפ)": תאריך קליטה ביחידה (סאפ)
+    - columnheader "טור נוכחות ביחידה פחות מ-30 יום (סאפ)": נוכחות ביחידה פחות מ-30 יום (סאפ)
+    - columnheader "טור דרגת כתף באירוע": דרגת כתף באירוע
+    - columnheader "טור דרגת כתף": דרגת כתף
+    - columnheader "טור סיבת העדרות אחרונה (סאפ)": סיבת העדרות אחרונה (סאפ)
+    - columnheader "טור כמות ימים שלא היה ביחידה (סאפ)": כמות ימים שלא היה ביחידה (סאפ)
+    - columnheader "טור יחידה מאגדת": יחידה מאגדת
+    - columnheader "טור ימי שהייה ביחידה מיום ההצבה ליום המתוכנן של הארוע": ימי שהייה ביחידה מיום ההצבה ליום המתוכנן של הארוע
+    - columnheader "טור ימי העדרות בפועל": ימי העדרות בפועל
+    - columnheader "טור הדרישה לתקופת מינימום ביחידה כתלות בימי העדרות": הדרישה לתקופת מינימום ביחידה כתלות בימי העדרות
+    - columnheader "טור הדרישה לרצף שהייה ביחידה לפני יום הארוע כפיצוי על ימי העדרות": הדרישה לרצף שהייה ביחידה לפני יום הארוע כפיצוי על ימי העדרות
+    - columnheader "טור עמידה בקריטריונים להשתתפות": עמידה בקריטריונים להשתתפות
+    - columnheader "טור סיבת הוספה": סיבת הוספה
+    - columnheader "טור סיבת הסרה": סיבת הסרה
+    - columnheader "משתתף"
+    - columnheader "טור הטיפול הושלם": הטיפול הושלם
+  - row "תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון":
+    - gridcell "תא סינון":
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - spinbutton "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - spinbutton "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - spinbutton "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - spinbutton "תא סינון"
+    - gridcell "תא סינון":
+      - combobox "תא סינון": (הכל)
+      - button "Select": 
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell "תא סינון":
+      - menubar:
+        - menuitem ""
+      - textbox "תא סינון"
+    - gridcell
+    - gridcell "תא סינון":
+      - combobox "תא סינון": (הכל)
+      - button "Select": 
+  - row "146850 146850 146850 תקשוב תפקיד פיקטיבי תקשוב 29/11/2021 21 - סרן פיקוד 1 248 1224 0 90 0 בחר שורה " [selected]:
+    - gridcell "undefined"
+    - gridcell "146850"
+    - gridcell "146850"
+    - gridcell "146850"
+    - gridcell "תקשוב"
+    - gridcell
+    - gridcell "תפקיד פיקטיבי"
+    - gridcell "תקשוב"
+    - gridcell "29/11/2021"
+    - gridcell
+    - gridcell
+    - gridcell "21 - סרן"
+    - gridcell
+    - gridcell
+    - gridcell "פיקוד 1 248"
+    - gridcell "1224"
+    - gridcell "0"
+    - gridcell "90"
+    - gridcell "0"
+    - gridcell "true"
+    - gridcell
+    - gridcell
+    - gridcell "בחר שורה":
+      - checkbox "" [checked]
+    - gridcell "":
+      - checkbox "" [checked]
+  - row "146852 146852 146852 מבצעים תפקיד פיקטיבי מבצעים 29/7/2022 21 - סרן פיקוד 1 248 982 0 90 0 בחר שורה " [selected]:
+    - gridcell "undefined"
+    - gridcell "146852"
+    - gridcell "146852"
+    - gridcell "146852"
+    - gridcell "מבצעים"
+    - gridcell
+    - gridcell "תפקיד פיקטיבי"
+    - gridcell "מבצעים"
+    - gridcell "29/7/2022"
+    - gridcell
+    - gridcell
+    - gridcell "21 - סרן"
+    - gridcell
+    - gridcell
+    - gridcell "פיקוד 1 248"
+    - gridcell "982"
+    - gridcell "0"
+    - gridcell "90"
+    - gridcell "0"
+    - gridcell "true"
+    - gridcell
+    - gridcell
+    - gridcell "בחר שורה":
+      - checkbox "" [checked]
+    - gridcell "":
+      - checkbox "" [checked]
+  - row "146854 146854 146854 פלוגה 331 תפקיד פיקטיבי פלוגה 331 11/3/2021 21 - סרן פיקוד 1 248 1487 0 90 0 בחר שורה " [selected]:
+    - gridcell "undefined"
+    - gridcell "146854"
+    - gridcell "146854"
+    - gridcell "146854"
+    - gridcell "פלוגה 331"
+    - gridcell
+    - gridcell "תפקיד פיקטיבי"
+    - gridcell "פלוגה 331"
+    - gridcell "11/3/2021"
+    - gridcell
+    - gridcell
+    - gridcell "21 - סרן"
+    - gridcell
+    - gridcell
+    - gridcell "פיקוד 1 248"
+    - gridcell "1487"
+    - gridcell "0"
+    - gridcell "90"
+    - gridcell "0"
+    - gridcell "true"
+    - gridcell
+    - gridcell
+    - gridcell "בחר שורה":
+      - checkbox "" [checked]
+    - gridcell "":
+      - checkbox "" [checked]
+  - row "146863 146863 146863 מבצעים תפקיד פיקטיבי מבצעים 3/11/2021 21 - סרן פיקוד 1 248 1250 0 90 0 בחר שורה " [selected]:
+    - gridcell "undefined"
+    - gridcell "146863"
+    - gridcell "146863"
+    - gridcell "146863"
+    - gridcell "מבצעים"
+    - gridcell
+    - gridcell "תפקיד פיקטיבי"
+    - gridcell "מבצעים"
+    - gridcell "3/11/2021"
+    - gridcell
+    - gridcell
+    - gridcell "21 - סרן"
+    - gridcell
+    - gridcell
+    - gridcell "פיקוד 1 248"
+    - gridcell "1250"
+    - gridcell "0"
+    - gridcell "90"
+    - gridcell "0"
+    - gridcell "true"
+    - gridcell
+    - gridcell
+    - gridcell "בחר שורה":
+      - checkbox "" [checked]
+    - gridcell "":
+      - checkbox "" [checked]
+  - row "146873 146873 146873 תחזוקה/אספקה תפקיד פיקטיבי תחזוקה/אספקה 15/9/2021 21 - סרן אוגדה 1 3 1299 0 90 0 בחר שורה " [selected]:
+    - gridcell "undefined"
+    - gridcell "146873"
+    - gridcell "146873"
+    - gridcell "146873"
+    - gridcell "תחזוקה/אספקה"
+    - gridcell
+    - gridcell "תפקיד פיקטיבי"
+    - gridcell "תחזוקה/אספקה"
+    - gridcell "15/9/2021"
+    - gridcell
+    - gridcell
+    - gridcell "21 - סרן"
+    - gridcell
+    - gridcell
+    - gridcell "אוגדה 1 3"
+    - gridcell "1299"
+    - gridcell "0"
+    - gridcell "90"
+    - gridcell "0"
+    - gridcell "true"
+    - gridcell
+    - gridcell
+    - gridcell "בחר שורה":
+      - checkbox "" [checked]
+    - gridcell "":
+      - checkbox "" [checked]
+  - row "146882 146882 146882 פלוגה 222 תפקיד פיקטיבי פלוגה 222 10/9/2021 21 - סרן פיקוד 1 248 1304 0 90 0 בחר שורה " [selected]:
+    - gridcell "undefined"
+    - gridcell "146882"
+    - gridcell "146882"
+    - gridcell "146882"
+    - gridcell "פלוגה 222"
+    - gridcell
+    - gridcell "תפקיד פיקטיבי"
+    - gridcell "פלוגה 222"
+    - gridcell "10/9/2021"
+    - gridcell
+    - gridcell
+    - gridcell "21 - סרן"
+    - gridcell
+    - gridcell
+    - gridcell "פיקוד 1 248"
+    - gridcell "1304"
+    - gridcell "0"
+    - gridcell "90"
+    - gridcell "0"
+    - gridcell "true"
+    - gridcell
+    - gridcell
+    - gridcell "בחר שורה":
+      - checkbox "" [checked]
+    - gridcell "":
+      - checkbox "" [checked]
+  - row "146884 146884 146884 רפואה תפקיד פיקטיבי רפואה 13/4/2022 21 - סרן פיקוד 1 248 1089 0 90 0 בחר שורה " [selected]:
+    - gridcell "undefined"
+    - gridcell "146884"
+    - gridcell "146884"
+    - gridcell "146884"
+    - gridcell "רפואה"
+    - gridcell
+    - gridcell "תפקיד פיקטיבי"
+    - gridcell "רפואה"
+    - gridcell "13/4/2022"
+    - gridcell
+    - gridcell
+    - gridcell "21 - סרן"
+    - gridcell
+    - gridcell
+    - gridcell "פיקוד 1 248"
+    - gridcell "1089"
+    - gridcell "0"
+    - gridcell "90"
+    - gridcell "0"
+    - gridcell "true"
+    - gridcell
+    - gridcell
+    - gridcell "בחר שורה":
+      - checkbox "" [checked]
+    - gridcell "":
+      - checkbox "" [checked]
+  - row "146896 146896 146896 תחזוקה/אספקה תפקיד פיקטיבי תחזוקה/אספקה 20/1/2021 21 - סרן אוגדה 1 3 1537 0 90 0 בחר שורה " [selected]:
+    - gridcell "undefined"
+    - gridcell "146896"
+    - gridcell "146896"
+    - gridcell "146896"
+    - gridcell "תחזוקה/אספקה"
+    - gridcell
+    - gridcell "תפקיד פיקטיבי"
+    - gridcell "תחזוקה/אספקה"
+    - gridcell "20/1/2021"
+    - gridcell
+    - gridcell
+    - gridcell "21 - סרן"
+    - gridcell
+    - gridcell
+    - gridcell "אוגדה 1 3"
+    - gridcell "1537"
+    - gridcell "0"
+    - gridcell "90"
+    - gridcell "0"
+    - gridcell "true"
+    - gridcell
+    - gridcell
+    - gridcell "בחר שורה":
+      - checkbox "" [checked]
+    - gridcell "":
+      - checkbox "" [checked]
+  - row "146898 146898 146898 תקשוב תפקיד פיקטיבי תקשוב 30/7/2021 21 - סרן פיקוד 1 248 1346 0 90 0 בחר שורה " [selected]:
+    - gridcell "undefined"
+    - gridcell "146898"
+    - gridcell "146898"
+    - gridcell "146898"
+    - gridcell "תקשוב"
+    - gridcell
+    - gridcell "תפקיד פיקטיבי"
+    - gridcell "תקשוב"
+    - gridcell "30/7/2021"
+    - gridcell
+    - gridcell
+    - gridcell "21 - סרן"
+    - gridcell
+    - gridcell
+    - gridcell "פיקוד 1 248"
+    - gridcell "1346"
+    - gridcell "0"
+    - gridcell "90"
+    - gridcell "0"
+    - gridcell "true"
+    - gridcell
+    - gridcell
+    - gridcell "בחר שורה":
+      - checkbox "" [checked]
+    - gridcell "":
+      - checkbox "" [checked]
+```
+
+# Test source
+
+```ts
+   1 |
+   2 |
+   3 | import { Page, Locator, expect } from '@playwright/test';
+   4 | import { logger } from '../Logger';
+   5 |
+   6 | export class Potential {
+   7 |     readonly page: Page;
+   8 |     readonly calculate: Locator;
+   9 |     readonly show: Locator;
+  10 |     readonly f1: Locator;
+  11 |
+  12 |
+  13 |
+  14 |
+  15 | constructor(page: Page) {
+  16 |     this.page = page;
+  17 |     this.calculate = page.getByRole('button', { name: 'חשב פוטנציאל מחדש' });
+  18 |     this.show = page.getByRole('button', { name: 'הצג פוטנציאל' })
+  19 |     this.f1 = page.getByRole('columnheader', { name: 'טור הטיפול הושלם' }).locator('span')
+  20 |
+  21 |
+  22 | }
+  23 |
+  24 |
+  25 |
+  26 |
+  27 | async Stage222() {
+  28 |     await this.calculate.click();
+  29 |     await this.show.click();
+  30 |     await this.page.waitForTimeout(32500);
+> 31 |     await this.f1.click();
+     |                   ^ Error: locator.click: Error: strict mode violation: getByRole('columnheader', { name: 'טור הטיפול הושלם' }).locator('span') resolved to 2 elements:
+  32 |    
+  33 | }  }
+  34 |
+```

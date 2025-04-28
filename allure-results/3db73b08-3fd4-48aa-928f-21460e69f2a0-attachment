@@ -1,0 +1,61 @@
+# Test info
+
+- Name: בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:9:5
+
+# Error details
+
+```
+Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://www.survey.co.il/pms/MMDANEW/default.asp", waiting until "load"
+
+    at LoginPage.goto (C:\Users\User\Downloads\playwright-ts\pages\LoginPage.ts:9:21)
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:18:21
+    at Function.step (C:\Users\User\Downloads\playwright-ts\node_modules\allure-playwright\src\helpers.ts:21:17)
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:16:16
+```
+
+# Test source
+
+```ts
+   1 |
+   2 | // pages/LoginPage.ts
+   3 | import { Page } from '@playwright/test';
+   4 |
+   5 | export class LoginPage {
+   6 |   constructor(private page: Page) {}
+   7 |
+   8 |   async goto() {
+>  9 |     await this.page.goto('https://www.survey.co.il/pms/MMDANEW/default.asp');
+     |                     ^ Error: page.goto: Target page, context or browser has been closed
+  10 |   }
+  11 |
+  12 |   async login(username: string, password: string) {
+  13 |     await this.page.locator('input[name="login"]').fill(username);
+  14 |     await this.page.locator('input[name="password"]').fill(password);
+  15 |     await this.page.locator('input[type="submit"]').click();
+  16 |     await this.page.waitForTimeout(1001);
+  17 |   }
+  18 |
+  19 |   /**
+  20 |    * לוחץ על קישור "ניהול הסקר" ומוודא ניווט לעמוד המתאים
+  21 |    */
+  22 | // פונקציה חדשה ב-LoginPage.ts:
+  23 | async goToSociometricManagement() {
+  24 |   // ריחוף על "ניהול הסקר"
+  25 |   const surveyAdminLink = this.page.locator('a:has-text("ניהול הסקר")');
+  26 |   await surveyAdminLink.hover();
+  27 |
+  28 |   // המתנה שתתפרס התפריט
+  29 |   const sociometricLink = this.page.locator('a:has-text("ניהול סוציומטרי")');
+  30 |  
+  31 |
+  32 |   // לחיצה על "ניהול סוציומטרי"
+  33 |   await sociometricLink.click();
+  34 |   await this.page.waitForTimeout(1000)
+  35 |
+  36 | }
+  37 |
+  38 | }
+```

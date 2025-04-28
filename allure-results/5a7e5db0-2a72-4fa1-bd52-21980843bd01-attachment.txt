@@ -1,0 +1,4 @@
+[2025-04-27 22:17:44] info: The test case has started
+[2025-04-27 22:32:30] info: we came to the end
+[2025-04-27 22:32:32] info: worked
+[2025-04-27 22:32:37] info: פיקוד אחד נלחץ

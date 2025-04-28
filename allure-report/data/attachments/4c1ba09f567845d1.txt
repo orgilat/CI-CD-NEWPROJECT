@@ -1,0 +1,328 @@
+# Test info
+
+- Name: בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:7:5
+
+# Error details
+
+```
+Error: locator.click: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for locator('div.col-4').filter({ has: locator('div.section_title:has-text("בחירת יחידות שאינן משתתפות באירוע")') }).locator('li[role="treeitem"][aria-label="אוגדה 1"]').locator('div.dx-checkbox-container')
+
+    at MainPage.fillEventDetails (C:\Users\User\Downloads\playwright-ts\pages\MainPage.ts:90:26)
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:33:5
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:32:3
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - button " עזרה":
+    - text: 
+    - paragraph: עזרה
+  - button " חזרה לדף הבית":
+    - text: 
+    - paragraph: חזרה לדף הבית
+  - link "":
+    - /url: "#/userLinks/7AB468E38ACF435BBC80"
+    - button ""
+  - text: 1.0.0.93
+- banner: ניהול אירוע סוציומטרי בחירת שאלות בחירה 0/2
+- main:
+  - text:  
+  - paragraph: מידע והנחיות
+  - paragraph: מודל כלל יחידתי - כולם מעריכים את כולם מודל תת יחידתי - כל קבוצה מעריכה את עצמה מודל כוכב - יחידת ליבה מעריכה את עצמה ואת היחידות המשתתפות, שם הן מעריכות את עצמן ואת יחידת הליבה.
+  - button ""
+  - text:  שאלון 1. שאלון סוציומטרי  מספר אירוע 440  כמות משיבים במטריצת מעריכים 0 שם האירוע
+  - textbox
+  - text: שם האירוע No-Text period
+  - button "עונת 1"
+  - text:  No-Text period
+  - list:
+    - listitem: עונת 1 
+  - text: No-Text pikud
+  - button "כללי"
+  - text:  No-Text pikud
+  - list:
+    - listitem: חיל אויר 
+    - listitem: כללי 
+    - listitem: "משא`ן "
+    - listitem: פיקוד העורף 
+    - listitem: תקשוב 
+  - combobox "תאריך התחלה": 06-04-2025
+  - button "Select": 
+  - text: תאריך התחלה
+  - combobox "תאריך סיום": 26-04-2025
+  - button "Select": 
+  - text: תאריך סיום
+  - paragraph: סטטוס האירוע
+  - list:
+    - listitem:
+      - radio "בהכנה" [checked]
+      - text:  בהכנה
+    - listitem:
+      - radio "בביצוע"
+      - text:  בביצוע
+    - listitem:
+      - radio "השהייה"
+      - text:  השהייה
+    - listitem:
+      - radio "סיום הזנה"
+      - text:  סיום הזנה
+    - listitem:
+      - radio "הסתיים/חישובים"
+      - text:  הסתיים/חישובים
+    - listitem:
+      - radio "סופי"
+      - text:  סופי
+    - listitem:
+      - radio "במאגר"
+      - text:  במאגר
+  - text: בחירת יחידה ראשית  פיקוד 1 - פיקוד 1 
+  - textbox "חפש..."
+  - text: חפש
+  - tree:
+    - group:
+      - 'treeitem "צה`ל" [expanded] [level=1]':
+        - checkbox
+        - text: "צה`ל - (100025) "
+        - group:
+          - treeitem "פיקוד 1" [expanded] [level=2] [selected]:
+            - checkbox "" [checked]
+            - text: פיקוד 1 - (19344) 
+            - group:
+              - treeitem "אוגדה 1" [level=3]:
+                - checkbox
+                - text: אוגדה 1 - (3921) 
+              - treeitem "אוגדה 2" [level=3]:
+                - checkbox
+                - text: אוגדה 2 - (3876) 
+              - treeitem "אוגדה 3" [level=3]:
+                - checkbox
+                - text: אוגדה 3 - (3870) 
+              - treeitem "אוגדה 4" [level=3]:
+                - checkbox
+                - text: אוגדה 4 - (3796) 
+              - treeitem "אוגדה 5" [level=3]:
+                - checkbox
+                - text: אוגדה 5 - (3847) 
+          - treeitem "פיקוד 2" [level=2]:
+            - checkbox
+            - text: פיקוד 2 - (15544) 
+          - treeitem "פיקוד 3" [level=2]:
+            - checkbox
+            - text: פיקוד 3 - (15437) 
+          - treeitem "פיקוד 4" [level=2]:
+            - checkbox
+            - text: פיקוד 4 - (15400) 
+          - treeitem "פיקוד 5" [level=2]:
+            - checkbox
+            - text: פיקוד 5 - (15224) 
+          - treeitem "פיקוד 6" [level=2]:
+            - checkbox
+            - text: פיקוד 6 - (19075) 
+  - text: הגדרת סוג היחידה לאירוע
+  - button "מטה"
+  - text:  הגדרת סוג היחידה לאירוע
+  - list:
+    - listitem: 
+    - listitem: שדה 
+    - listitem: מטה 
+  - text: בחירת יחידות שאינן משתתפות באירוע 
+  - textbox "חפש..."
+  - text: חפש
+  - tree:
+    - group:
+      - 'treeitem "צה`ל" [expanded] [level=1]':
+        - checkbox
+        - text: "צה`ל - (100025) "
+        - group:
+          - treeitem "פיקוד 1" [level=2]:
+            - checkbox
+            - text: פיקוד 1 - (19344) 
+          - treeitem "פיקוד 2" [level=2]:
+            - checkbox
+            - text: פיקוד 2 - (15544) 
+          - treeitem "פיקוד 3" [level=2]:
+            - checkbox
+            - text: פיקוד 3 - (15437) 
+          - treeitem "פיקוד 4" [level=2]:
+            - checkbox
+            - text: פיקוד 4 - (15400) 
+          - treeitem "פיקוד 5" [level=2]:
+            - checkbox
+            - text: פיקוד 5 - (15224) 
+          - treeitem "פיקוד 6" [level=2]:
+            - checkbox
+            - text: פיקוד 6 - (19075) 
+  - text: בחירת יחידות מאגדות להצגת דוח מילוי 
+  - textbox "חפש..."
+  - text: חפש
+  - tree:
+    - group:
+      - 'treeitem "צה`ל" [expanded] [level=1]':
+        - checkbox
+        - text: "צה`ל - (100025) "
+        - group:
+          - treeitem "פיקוד 1" [level=2]:
+            - checkbox
+            - text: פיקוד 1 - (19344) 
+          - treeitem "פיקוד 2" [level=2]:
+            - checkbox
+            - text: פיקוד 2 - (15544) 
+          - treeitem "פיקוד 3" [level=2]:
+            - checkbox
+            - text: פיקוד 3 - (15437) 
+          - treeitem "פיקוד 4" [level=2]:
+            - checkbox
+            - text: פיקוד 4 - (15400) 
+          - treeitem "פיקוד 5" [level=2]:
+            - checkbox
+            - text: פיקוד 5 - (15224) 
+          - treeitem "פיקוד 6" [level=2]:
+            - checkbox
+            - text: פיקוד 6 - (19075) 
+  - text: שאלות שאלות חובה
+  - paragraph: שאלות אלו לא ניתנות לשינוי
+  - checkbox "מידת היכרות" [checked] [disabled]
+  - text:  מידת היכרות
+  - checkbox "מקצועי בתחומו" [checked] [disabled]
+  - text:  מקצועי בתחומו
+  - checkbox "יחסי אנוש" [checked] [disabled]
+  - text:  יחסי אנוש
+  - checkbox "דוגמא אישית" [checked] [disabled]
+  - text:  דוגמא אישית
+  - checkbox "ארגון וניהול" [checked] [disabled]
+  - text:  ארגון וניהול
+  - checkbox "פיקוד ומנהיגות" [checked] [disabled]
+  - text:  פיקוד ומנהיגות
+  - checkbox "מחוייבות והשקעה" [checked] [disabled]
+  - text:  מחוייבות והשקעה
+  - checkbox "הצלחה במילוי תפקיד" [checked] [disabled]
+  - text:  הצלחה במילוי תפקיד
+  - checkbox "פוטנציאל לקידום" [checked] [disabled]
+  - text:  פוטנציאל לקידום שאלות בחירה
+  - paragraph: בחר שתי שאלות בחירה
+  - text: בחירת שאלות בחירה 0/2
+  - checkbox "הבחנה בין עיקר לטפל"
+  - text:  הבחנה בין עיקר לטפל
+  - checkbox "ראייה והבנה מערכתית"
+  - text:  ראייה והבנה מערכתית
+  - checkbox "מקוריות וחדשנות"
+  - text:  מקוריות וחדשנות
+  - checkbox "גמישות מחשבתית"
+  - text:  גמישות מחשבתית
+  - checkbox "יכולת תכנון"
+  - text:  יכולת תכנון
+  - checkbox "יכולת הפקת לקחים ויישומם"
+  - text:  יכולת הפקת לקחים ויישומם הערות מילוליות
+  - paragraph: סמן V אם ברצונך להוסיף הערות מילוליות
+  - checkbox "הערות מילוליות"
+  - text:  הערות מילוליות usersId=11 loginManagerId=-1 viewOnly=false status=1 adminPermission=true eventEditAccess=1 isPotentialCompleted=false isSuspectCareCompleted=false eventStatus2to1Access=1 eventStatus3to2Access=1
+```
+
+# Test source
+
+```ts
+   1 |
+   2 | import { Page, Locator, expect } from '@playwright/test';
+   3 | import { logger } from '../Logger';
+   4 |
+   5 | export class MainPage {
+   6 |     readonly page: Page;
+   7 |     readonly eventManagementButton: Locator;
+   8 |     readonly createNewEventButton: Locator;
+   9 |     readonly eventNameInput: Locator;
+  10 |     readonly seasonDropdown: Locator;
+  11 |     readonly startDateButton: Locator;
+  12 |     readonly endDateButton: Locator;
+  13 |     readonly seasonOption: Locator;
+  14 |     readonly recruit: Locator;
+  15 |     readonly recruitOption: Locator;
+  16 |     readonly mateS: Locator;
+  17 |     readonly mateC: Locator;
+  18 |     readonly pikud1: Locator; 
+  19 |     readonly list2: Locator;
+  20 |     readonly ogda1: Locator;
+  21 |
+  22 |
+  23 |
+  24 |     constructor(page: Page) {
+  25 |         this.page = page;
+  26 |         this.eventManagementButton = page.locator('input[value="1\u00A0\u00A0ניהול אירועים"]');
+  27 |         this.createNewEventButton = page.locator('button:has-text("להקמת אירוע חדש")');
+  28 |         this.eventNameInput = page.locator('div.text-box[data-label-val="שם האירוע"] input[type="text"]');
+  29 |         this.seasonDropdown = page.locator('div.dropdown.dropdown-select[label="No-Text period"]');
+  30 |         this.seasonOption = page.locator('span:has-text("עונת 1")');
+  31 |         this.recruit = page.locator('div.dropdown-btn.text-box[data-label-val="No-Text pikud"]');
+  32 |         this.recruitOption = page.locator('span:has-text("כללי")');
+  33 |         this.mateS = page.locator('div.dropdown-btn.text-box[data-label-val="הגדרת סוג היחידה לאירוע "]');
+  34 |         this.mateC = page.locator('span:has-text("מטה")');
+  35 |         this.pikud1 = page.locator(
+  36 |             'li[role="treeitem"][aria-label="פיקוד 1"] >> div[role="checkbox"]'
+  37 |           );
+  38 |
+  39 |           this.list2 = page.locator('div.col-4', {
+  40 |             has: page.locator('div.section_title:has-text("בחירת יחידות שאינן משתתפות באירוע")')
+  41 |           });
+  42 |           
+  43 |           this.ogda1 = this.list2.locator(
+  44 |             'li[role="treeitem"][aria-label="אוגדה 1"] >> div.dx-checkbox-container'
+  45 |           );
+  46 |
+  47 |
+  48 |
+  49 |
+  50 |         this.startDateButton = page.locator(
+  51 |             '#layout > div > div.app_content > div > main > div > div:nth-child(9) > div > div:nth-child(1) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+  52 |         );
+  53 |         this.endDateButton = page.locator(
+  54 |             '#layout > div > div.app_content > div > main > div > div:nth-child(9) > div > div:nth-child(2) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+  55 |         );
+  56 |     }
+  57 |
+  58 |     async navigateToEventCreation() {
+  59 |         await this.eventManagementButton.click();
+  60 |         await this.createNewEventButton.click();
+  61 |        
+  62 |     }
+  63 |
+  64 |     async fillEventDetails() {
+  65 |         await this.eventNameInput.scrollIntoViewIfNeeded();
+  66 |         await this.eventNameInput.fill('מרינה 2025'); // לא בכח (ללא force!)
+  67 |         await expect(this.eventNameInput).toHaveValue('מרינה 2025');
+  68 |
+  69 |         await this.seasonDropdown.click();
+  70 |         await this.seasonOption.click();
+  71 |         // הוספת בחירת עונה כאן אם צריך
+  72 |
+  73 |         // בחירת תאריך התחלה
+  74 |         await this.startDateButton.click();
+  75 |         const startDate = this.page.locator('[data-value="2025/04/06"]');
+  76 |         await startDate.click();    // בחירת תאריך סיום
+  77 |         await this.endDateButton.click();
+  78 |         await this.page.keyboard.press('Enter');
+  79 |         await this.recruit.click();
+  80 |         await this.recruitOption.click();
+  81 |         logger.info('we came to the end');
+  82 |         await this.mateS.click();
+  83 |         logger.info('worked');
+  84 |         await this.mateC.click();
+  85 |         await this.pikud1.click();
+  86 |         logger.info('פיקוד אחד נלחץ');
+  87 |         await this.page.waitForTimeout(9000)
+  88 |         await this.list2.scrollIntoViewIfNeeded();
+  89 |         await this.page.waitForTimeout(7000)
+> 90 |         await this.ogda1.click();
+     |                          ^ Error: locator.click: Test timeout of 90000ms exceeded.
+  91 |         await this.page.waitForTimeout(7000)
+  92 |         // מחכה 3 שניות (3000 מילישניות)
+  93 |       
+  94 |
+  95 |     }
+  96 | }
+  97 |
+  98 |
+```

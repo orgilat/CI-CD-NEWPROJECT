@@ -1,0 +1,75 @@
+# Test info
+
+- Name: test
+- Location: C:\Users\User\Downloads\playwright-ts\recorded.spec.ts:3:5
+
+# Error details
+
+```
+Error: locator.press: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for getByRole('textbox', { name: 'הכנס שם משתמש' })
+    175 × locator resolved to <input type="text" name="login" maxlength="50" placeholder="הכנס שם משתמש" class="newlogin-formPage-field"/>
+      - elementHandle.press("ControlOrMeta+ה")
+
+    at C:\Users\User\Downloads\playwright-ts\recorded.spec.ts:6:62
+```
+
+# Page snapshot
+
+```yaml
+- heading "ברוך הבא למערכת תמורות." [level=1]
+- textbox "הכנס שם משתמש"
+- textbox "הכנס סיסמה"
+- button "כניסה"
+- text: כל הערכים
+- link "שכחתי סיסמה":
+  - /url: restorepassword.asp
+- img
+- list:
+  - listitem: © כל הזכויות שמורות לתמורות
+  - listitem: 03-9246246
+  - listitem:
+    - img
+```
+
+# Test source
+
+```ts
+   1 | import { test, expect } from '@playwright/test';
+   2 |
+   3 | test('test', async ({ page }) => {
+   4 |   await page.goto('https://www.survey.co.il/pms/MMDANEW/default.asp');
+   5 |   await page.getByRole('textbox', { name: 'הכנס שם משתמש' }).click();
+>  6 |   await page.getByRole('textbox', { name: 'הכנס שם משתמש' }).press('ControlOrMeta+ה');
+     |                                                              ^ Error: locator.press: Test timeout of 90000ms exceeded.
+   7 |   await page.getByRole('textbox', { name: 'הכנס סיסמה' }).click();
+   8 |   await page.getByRole('textbox', { name: 'הכנס סיסמה' }).press('ControlOrMeta+ה');
+   9 |   await page.getByRole('button', { name: 'כניסה' }).click();
+  10 |   await page1.getByRole('link', { name: 'ניהול סוציומטרי' }).click();
+  11 |   await page1.getByRole('button', { name: 'ניהול אירועים' }).click();
+  12 |   await page1.goto('https://www.survey.co.il/SMclient/#/eventsList/7FF345DA1B5F4DA190C1/');
+  13 |   await page1.getByRole('button', { name: 'להקמת אירוע חדש' }).click();
+  14 |   await page1.locator('div').filter({ hasText: /^שם האירוע$/ }).getByRole('textbox').click();
+  15 |   await page1.locator('div').filter({ hasText: /^שם האירוע$/ }).getByRole('textbox').fill('מממ');
+  16 |   await page1.locator('input[type="button"]').first().click();
+  17 |   await page1.getByRole('listitem').filter({ hasText: 'עונת' }).locator('div').click();
+  18 |   await page1.locator('input[type="button"]').nth(1).click();
+  19 |   await page1.locator('div').filter({ hasText: /^כללי$/ }).click();
+  20 |   await page1.getByRole('button', { name: 'Select' }).first().click();
+  21 |   await page1.getByText('28').first().click();
+  22 |   await page1.getByRole('button', { name: 'Select' }).nth(1).click();
+  23 |   await page1.getByRole('rowgroup').filter({ hasText: '543213130121110987619181716151413262524232221203213029282710987654' }).getByLabel('יום שלישי, 29 באפריל').click();
+  24 |   await page1.locator('input[type="button"]').nth(2).click();
+  25 |   await page1.getByRole('listitem').filter({ hasText: 'מטה' }).locator('div').click();
+  26 |   await page1.getByRole('treeitem', { name: 'פיקוד 1' }).getByRole('checkbox').click();
+  27 |   await page1.getByText('הבחנה בין עיקר לטפל').click();
+  28 |   await page1.getByText('ראייה והבנה מערכתית').click();
+  29 |   await page1.getByRole('tab', { name: 'ניהול פוטנציאל' }).click();
+  30 |   await page1.getByRole('button', { name: 'חשב פוטנציאל מחדש' }).click();
+  31 |   await page1.getByRole('button', { name: 'הצג פוטנציאל' }).click();
+  32 |   await page1.getByText('הטיפול הושלם').click();
+  33 |   await page1.getByRole('button', { name: 'הצג פוטנציאל' }).click();
+  34 |   await page1.getByText('close').click();
+  35 | });
+```

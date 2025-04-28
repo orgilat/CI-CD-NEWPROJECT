@@ -1,0 +1,252 @@
+# Test info
+
+- Name: בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:7:5
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: locator('div.dx-widget.dx-checkbox.dx-rtl[role="checkbox"] .dx-checkbox-container') resolved to 7 elements:
+    1) <div class="dx-checkbox-container">…</div> aka getByRole('checkbox', { name: '' })
+    2) <div class="dx-checkbox-container">…</div> aka getByRole('treeitem', { name: 'פיקוד 1' }).getByRole('checkbox')
+    3) <div class="dx-checkbox-container">…</div> aka getByRole('treeitem', { name: 'פיקוד 2' }).getByRole('checkbox')
+    4) <div class="dx-checkbox-container">…</div> aka getByRole('treeitem', { name: 'פיקוד 3' }).getByRole('checkbox')
+    5) <div class="dx-checkbox-container">…</div> aka getByRole('treeitem', { name: 'פיקוד 4' }).getByRole('checkbox')
+    6) <div class="dx-checkbox-container">…</div> aka getByRole('treeitem', { name: 'פיקוד 5' }).getByRole('checkbox')
+    7) <div class="dx-checkbox-container">…</div> aka getByRole('treeitem', { name: 'פיקוד 6' }).getByRole('checkbox')
+
+Call log:
+  - waiting for locator('div.dx-widget.dx-checkbox.dx-rtl[role="checkbox"] .dx-checkbox-container')
+
+    at MainPage.fillEventDetails (C:\Users\User\Downloads\playwright-ts\pages\MainPage.ts:74:27)
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:33:5
+    at C:\Users\User\Downloads\playwright-ts\tests\example.spec.ts:32:3
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - button " עזרה":
+    - text: 
+    - paragraph: עזרה
+  - button " חזרה לדף הבית":
+    - text: 
+    - paragraph: חזרה לדף הבית
+  - link "":
+    - /url: "#/userLinks/6A9605519BEA49F9B2E3"
+    - button ""
+  - text: 1.0.0.93
+- banner: ניהול אירוע סוציומטרי בחירת שאלות בחירה 0/2
+- main:
+  - text:  
+  - paragraph: מידע והנחיות
+  - paragraph: מודל כלל יחידתי - כולם מעריכים את כולם מודל תת יחידתי - כל קבוצה מעריכה את עצמה מודל כוכב - יחידת ליבה מעריכה את עצמה ואת היחידות המשתתפות, שם הן מעריכות את עצמן ואת יחידת הליבה.
+  - button ""
+  - text:  שאלון 1. שאלון סוציומטרי  מספר אירוע 430  כמות משיבים במטריצת מעריכים 0 שם האירוע
+  - textbox
+  - text: שם האירוע No-Text period
+  - button "עונת 1"
+  - text:  No-Text period
+  - list:
+    - listitem: עונת 1 
+  - text: No-Text pikud
+  - button "כללי"
+  - text:  No-Text pikud
+  - list:
+    - listitem: חיל אויר 
+    - listitem: כללי 
+    - listitem: "משא`ן "
+    - listitem: פיקוד העורף 
+    - listitem: תקשוב 
+  - combobox "תאריך התחלה": 06-04-2025
+  - button "Select": 
+  - text: תאריך התחלה
+  - combobox "תאריך סיום": 26-04-2025
+  - button "Select": 
+  - text: תאריך סיום
+  - paragraph: סטטוס האירוע
+  - list:
+    - listitem:
+      - radio "בהכנה" [checked]
+      - text:  בהכנה
+    - listitem:
+      - radio "בביצוע"
+      - text:  בביצוע
+    - listitem:
+      - radio "השהייה"
+      - text:  השהייה
+    - listitem:
+      - radio "סיום הזנה"
+      - text:  סיום הזנה
+    - listitem:
+      - radio "הסתיים/חישובים"
+      - text:  הסתיים/חישובים
+    - listitem:
+      - radio "סופי"
+      - text:  סופי
+    - listitem:
+      - radio "במאגר"
+      - text:  במאגר
+  - text: "בחירת יחידה ראשית  צה`ל - צה`ל "
+  - textbox "חפש..."
+  - text: חפש
+  - tree:
+    - group:
+      - 'treeitem "צה`ל" [expanded] [level=1] [selected]':
+        - checkbox "" [checked]
+        - text: "צה`ל - (100025) "
+        - group:
+          - treeitem "פיקוד 1" [level=2]:
+            - checkbox
+            - text: פיקוד 1 - (19344) 
+          - treeitem "פיקוד 2" [level=2]:
+            - checkbox
+            - text: פיקוד 2 - (15544) 
+          - treeitem "פיקוד 3" [level=2]:
+            - checkbox
+            - text: פיקוד 3 - (15437) 
+          - treeitem "פיקוד 4" [level=2]:
+            - checkbox
+            - text: פיקוד 4 - (15400) 
+          - treeitem "פיקוד 5" [level=2]:
+            - checkbox
+            - text: פיקוד 5 - (15224) 
+          - treeitem "פיקוד 6" [level=2]:
+            - checkbox
+            - text: פיקוד 6 - (19075) 
+  - text: הגדרת סוג היחידה לאירוע
+  - button "מטה"
+  - text:  הגדרת סוג היחידה לאירוע
+  - list:
+    - listitem: 
+    - listitem: שדה 
+    - listitem: מטה 
+  - text: בחירת יחידות שאינן משתתפות באירוע אנא בחר יחידה ראשית בחירת יחידות מאגדות להצגת דוח מילוי אנא בחר יחידה ראשית שאלות שאלות חובה
+  - paragraph: שאלות אלו לא ניתנות לשינוי
+  - text: שאלות בחירה
+  - paragraph: בחר שתי שאלות בחירה
+  - text: בחירת שאלות בחירה 0/2
+  - checkbox "מידת היכרות"
+  - text:  מידת היכרות
+  - checkbox "מקצועי בתחומו"
+  - text:  מקצועי בתחומו
+  - checkbox "יחסי אנוש"
+  - text:  יחסי אנוש
+  - checkbox "דוגמא אישית"
+  - text:  דוגמא אישית
+  - checkbox "ארגון וניהול"
+  - text:  ארגון וניהול
+  - checkbox "פיקוד ומנהיגות"
+  - text:  פיקוד ומנהיגות
+  - checkbox "מחוייבות והשקעה"
+  - text:  מחוייבות והשקעה
+  - checkbox "הצלחה במילוי תפקיד"
+  - text:  הצלחה במילוי תפקיד
+  - checkbox "פוטנציאל לקידום"
+  - text:  פוטנציאל לקידום
+  - checkbox "נכונות לצאת איתו לקרב"
+  - text:  נכונות לצאת איתו לקרב
+  - checkbox "הבחנה בין עיקר לטפל"
+  - text:  הבחנה בין עיקר לטפל
+  - checkbox "ראייה והבנה מערכתית"
+  - text:  ראייה והבנה מערכתית
+  - checkbox "מקוריות וחדשנות"
+  - text:  מקוריות וחדשנות
+  - checkbox "גמישות מחשבתית"
+  - text:  גמישות מחשבתית
+  - checkbox "יכולת תכנון"
+  - text:  יכולת תכנון
+  - checkbox "יכולת הפקת לקחים ויישומם"
+  - text:  יכולת הפקת לקחים ויישומם הערות מילוליות
+  - paragraph: סמן V אם ברצונך להוסיף הערות מילוליות
+  - checkbox "הערות מילוליות"
+  - text:  הערות מילוליות usersId=11 loginManagerId=-1 viewOnly=false status=1 adminPermission=true eventEditAccess=1 isPotentialCompleted=false isSuspectCareCompleted=false eventStatus2to1Access=1 eventStatus3to2Access=1
+- text: טוען...
+```
+
+# Test source
+
+```ts
+   1 |
+   2 | import { Page, Locator, expect } from '@playwright/test';
+   3 | import { logger } from '../Logger';
+   4 |
+   5 | export class MainPage {
+   6 |     readonly page: Page;
+   7 |     readonly eventManagementButton: Locator;
+   8 |     readonly createNewEventButton: Locator;
+   9 |     readonly eventNameInput: Locator;
+  10 |     readonly seasonDropdown: Locator;
+  11 |     readonly startDateButton: Locator;
+  12 |     readonly endDateButton: Locator;
+  13 |     readonly seasonOption: Locator;
+  14 |     readonly recruit: Locator;
+  15 |     readonly recruitOption: Locator;
+  16 |     readonly mateS: Locator;
+  17 |     readonly mateC: Locator;
+  18 |     readonly pikud1: Locator;
+  19 |
+  20 |
+  21 |
+  22 |     constructor(page: Page) {
+  23 |         this.page = page;
+  24 |         this.eventManagementButton = page.locator('input[value="1\u00A0\u00A0ניהול אירועים"]');
+  25 |         this.createNewEventButton = page.locator('button:has-text("להקמת אירוע חדש")');
+  26 |         this.eventNameInput = page.locator('div.text-box[data-label-val="שם האירוע"] input[type="text"]');
+  27 |         this.seasonDropdown = page.locator('div.dropdown.dropdown-select[label="No-Text period"]');
+  28 |         this.seasonOption = page.locator('span:has-text("עונת 1")');
+  29 |         this.recruit = page.locator('div.dropdown-btn.text-box[data-label-val="No-Text pikud"]');
+  30 |         this.recruitOption = page.locator('span:has-text("כללי")');
+  31 |         this.mateS = page.locator('div.dropdown-btn.text-box[data-label-val="הגדרת סוג היחידה לאירוע "]');
+  32 |         this.mateC = page.locator('span:has-text("מטה")');
+  33 |         this.pikud1 = page.locator('div.dx-widget.dx-checkbox.dx-rtl[role="checkbox"] .dx-checkbox-container');
+  34 |
+  35 |
+  36 |
+  37 |
+  38 |
+  39 |         this.startDateButton = page.locator(
+  40 |             '#layout > div > div.app_content > div > main > div > div:nth-child(9) > div > div:nth-child(1) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+  41 |         );
+  42 |         this.endDateButton = page.locator(
+  43 |             '#layout > div > div.app_content > div > main > div > div:nth-child(9) > div > div:nth-child(2) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+  44 |         );
+  45 |     }
+  46 |
+  47 |     async navigateToEventCreation() {
+  48 |         await this.eventManagementButton.click();
+  49 |         await this.createNewEventButton.click();
+  50 |        
+  51 |     }
+  52 |
+  53 |     async fillEventDetails() {
+  54 |         await this.eventNameInput.scrollIntoViewIfNeeded();
+  55 |         await this.eventNameInput.fill('מרינה 2025'); // לא בכח (ללא force!)
+  56 |         await expect(this.eventNameInput).toHaveValue('מרינה 2025');
+  57 |
+  58 |         await this.seasonDropdown.click();
+  59 |         await this.seasonOption.click();
+  60 |         // הוספת בחירת עונה כאן אם צריך
+  61 |
+  62 |         // בחירת תאריך התחלה
+  63 |         await this.startDateButton.click();
+  64 |         const startDate = this.page.locator('[data-value="2025/04/06"]');
+  65 |         await startDate.click();    // בחירת תאריך סיום
+  66 |         await this.endDateButton.click();
+  67 |         await this.page.keyboard.press('Enter');
+  68 |         await this.recruit.click();
+  69 |         await this.recruitOption.click();
+  70 |         logger.info('we came to the end');
+  71 |         await this.mateS.click();
+  72 |         logger.info('worked');
+  73 |         await this.mateC.click();
+> 74 |         await this.pikud1.click();
+     |                           ^ Error: locator.click: Error: strict mode violation: locator('div.dx-widget.dx-checkbox.dx-rtl[role="checkbox"] .dx-checkbox-container') resolved to 7 elements:
+  75 |         logger.info('פיקוד אחד נלחץ');
+  76 |     }
+  77 | }
+  78 |
+  79 |
+  80 |
+```

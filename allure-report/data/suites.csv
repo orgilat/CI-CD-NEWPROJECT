@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"The test case is to registr a new user and add a product to the cart","30220","בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות","chromium","Sun Apr 27 17:53:01 IDT 2025","failed","Sun Apr 27 17:53:31 IDT 2025","","tests\example.spec.ts","",""
+"The test case is to registr a new user and add a product to the cart","90629","בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות","","Mon Apr 28 17:32:37 IDT 2025","broken","Mon Apr 28 17:34:08 IDT 2025","","tests\example.spec.ts","",""
+"","90609","test","","Mon Apr 28 17:32:37 IDT 2025","broken","Mon Apr 28 17:34:08 IDT 2025","","recorded.spec.ts","",""

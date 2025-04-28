@@ -20,6 +20,9 @@ export class MainPage {
     readonly ogda1: Locator;
     readonly end1: Locator;
     readonly end2: Locator;
+    readonly end3: Locator;
+    readonly end4: Locator;
+    readonly final: Locator;
 
 
 
@@ -59,12 +62,14 @@ export class MainPage {
 
 
 
-        this.end1 = page.locator('div.questions_section >> div.checkbox >> input[id="9"]');
-        this.end2 = page.locator('div.questions_section >> div.checkbox >> input[id="10"]');
+        this.end1 = page.locator('#layout > div > div.app_content > div > main > div > div:nth-child(22) > div.questions_section > div:nth-child(2) > div');
+        
+        this.end3 = page.locator('#layout > div > div.app_content > div > main > div > div:nth-child(22) > div.questions_section > div:nth-child(6) > div');
+        
+        this.final = page.locator('div.q-tab__label:has-text("ניהול פוטנציאל")');
 
 
-
-
+      
     }
 
     async navigateToEventCreation() {
@@ -106,15 +111,25 @@ export class MainPage {
         await this.ogda1.scrollIntoViewIfNeeded();
         await this.ogda1.click({ force: true });
         logger.info('אוגדה 1 נלחצה');
-        await this.end1.waitFor({ state: 'attached' }); // מחכה שהאלמנט יהיה ב-DOM
-        await this.page.waitForTimeout(500); // נותן שנייה ל-overlay להיעלם
-        await this.end1.click({ force: true }); // לוחץ בכוח
-        logger.info('אופציה 1 נלחצה');
-        await this.end2.click({ force: true }); // לוחץ בכוח
-        
-        // מחכה 3 שניות (3000 מילישניות)
-      
+        await this.page.waitForTimeout(2500);
 
     }
-}
+      
 
+    
+    async checkbox() {
+
+  // גלילה כדי לוודא שהאלמנטים גלויים
+        await this.end1.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+        await this.end1.click({ force: true });
+        await this.page.waitForTimeout(2500);
+      
+        await this.end3.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+        await this.end3.click({ force: true });
+        await this.page.waitForTimeout(2500);
+        await this.final.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+        await this.final.click({ force: true });
+        await this.page.waitForTimeout(2500);
+
+     }  
+    } 

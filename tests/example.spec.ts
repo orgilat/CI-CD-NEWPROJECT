@@ -1,15 +1,13 @@
-
-import { test, expect } from './fixtures';
+import { test, expect } from './fixtures';  // ייבוא מ-fixtures
 import { allure } from 'allure-playwright';
 import { logger } from '../Logger';
 
-
-test('בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות', async ({ loginPage, homePage, mainPage }) => {
-  
-    allure.description("The test case is to registr a new user and add a product to the cart");
-    allure.owner("or gilat");
-    allure.tags("entry", "development");
-    allure.severity('critical');
+test('בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות', async ({ loginPage, homePage, mainPage, potential }) => {
+  // כל הטסט תחת אותו Test case
+  allure.description("The test case is to register a new user and add a product to the cart");
+  allure.owner("or gilat");
+  allure.tags("entry", "development");
+  allure.severity('critical');
 
   await allure.step('התחברות למערכת', async () => {
     logger.info('The test case has started');
@@ -31,7 +29,13 @@ test('בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונ
 
   await allure.step('מילוי פרטי האירוע', async () => {
     await mainPage.fillEventDetails();
+    await mainPage.checkbox();
     logger.info('The test has ended');
   });
-});
 
+  // 🔥 כאן אתה פשוט ממשיך לשלב הבא — בלי לפתוח test חדש
+  await allure.step('מילוי עמוד שני', async () => {
+    await potential.Stage222();
+    logger.info('Finished potential stage');
+  });
+});
